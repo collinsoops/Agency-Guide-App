@@ -1,7 +1,6 @@
 import 'package:agencyguide/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'Card.dart';
 import 'Menu.dart';
 import 'Page.dart';
@@ -22,6 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: _title,
       home: MyStatefulWidget(key:UniqueKey(),),
     );
