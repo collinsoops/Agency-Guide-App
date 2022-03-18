@@ -28,14 +28,16 @@ class SelectCard extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.all(4.0),
               ),
-
+              Container(
+                height: 5,
+              ),
               Padding(
                   padding: EdgeInsets.all(2),
                   child:ClipRRect(
                     borderRadius: BorderRadius.circular(50.0),
                     child: Image.asset(
                       menu.strImages[0],
-                      height: 50.0,
+                      height: 30.0,
                       width: 50.0,
                       fit:BoxFit.contain, //change image fill type
                     ),
@@ -52,9 +54,7 @@ class SelectCard extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               ),*/
-              Container(
-                height: 10,
-              ),
+
               Center(
                 child: Column(
                   //top: 0,

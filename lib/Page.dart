@@ -51,13 +51,27 @@ class _SwipePageState extends State<SwipePage> {
         backgroundColor: Colors.green,
         title: Text(option),
         actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.more_vert,
-              color: Colors.white,
-            ),
-            onPressed: () {
-              ShowExitDialog();
+          PopupMenuButton<Text>(
+            itemBuilder: (context) {
+              return [
+                PopupMenuItem(
+                  child: Text(
+                    "Back",
+                  ),
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                ),
+                PopupMenuItem(
+                  child: Text(
+                    "Exit",
+                  ),
+                  onTap: () {
+                    SystemChannels.platform.invokeMethod('SystemNavigator.pop');
+
+                  },
+                ),
+              ];
             },
           )
         ],

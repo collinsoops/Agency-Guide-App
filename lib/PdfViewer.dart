@@ -19,7 +19,8 @@ class _HomePage extends State<MyPdfViewer> {
 
   @override
   Widget build(BuildContext context) {
-       return Scaffold(
+       //return Scaffold(
+/*
         appBar: AppBar(
           title:  Text(Constants.appName),
           actions: <Widget>[
@@ -35,10 +36,11 @@ class _HomePage extends State<MyPdfViewer> {
             ),
           ],
         ),
-        body: SfPdfViewer.asset(
+*/
+        return SfPdfViewer.asset(
           'assets/Agency Guide-Training Material Guide.pdf',
           key: _pdfViewerKey,
-        ),
-    );
+        );
+
   }
 }
