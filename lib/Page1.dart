@@ -118,7 +118,7 @@ class _SwipePageState extends State<SwipePage> {
                                     Align(
                                       child: Image.asset(
                                         strImages[index],
-                                        width: MediaQuery.of(context).size.width-500,
+                                        width: 100,
                                         height: 100,
                                         fit: BoxFit.fill,
                                       ),
