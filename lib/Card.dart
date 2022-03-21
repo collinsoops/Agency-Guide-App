@@ -16,6 +16,7 @@ class SelectCard extends StatelessWidget {
     return MaterialButton(
       elevation: 1.0,
       highlightElevation: 1.0,
+      padding: EdgeInsets.all(1),
       onPressed:(){
         Navigator.push(
             context,
@@ -30,6 +31,8 @@ class SelectCard extends StatelessWidget {
       },
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
+        side: BorderSide(width: 1, color: Colors.black12),
+
       ),
       color: Colors.white,
       textColor: Colors.black,
@@ -39,8 +42,8 @@ class SelectCard extends StatelessWidget {
           if(menu.strImages[0] != null)
      Image.asset(
       menu.strImages[0],
-      width: 50,
-      height: 50,
+      width: 30,
+      height: 30,
       fit: BoxFit.fill,
     ),
           if(menu.title != null)
