@@ -2,16 +2,13 @@
 import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-import 'Constants.dart';
 
 class MyPdfViewer extends StatefulWidget {
   @override
   _HomePage createState() => _HomePage();
 }
-
 class _HomePage extends State<MyPdfViewer> {
   final GlobalKey<SfPdfViewerState> _pdfViewerKey = GlobalKey();
-
   @override
   void initState() {
     super.initState();

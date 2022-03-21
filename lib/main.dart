@@ -8,47 +8,57 @@ import 'Menus.dart';
 import 'PdfViewer.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-
-  MyApp({Key? key,}) : super(key: key);
+  MyApp({
+    Key? key,
+  }) : super(key: key);
 
   static final String _title = Constants.appName;
-
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: _title,
-      home: MyStatefulWidget(key:UniqueKey(),),
+      home: MyStatefulWidget(
+        key: UniqueKey(),
+      ),
     );
   }
 }
 
 class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key? key,}) : super(key: key);
-
+  MyStatefulWidget({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
 }
 
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-
   @override
   void initState() {
     //final men = widget.menusi;
     super.initState();
   }
+
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static final List<Widget> _widgetOptions = <Widget>[
     Container(
+        margin: const EdgeInsets.all(4),
         padding: const EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: Colors.black12,
+          ),
+          borderRadius: BorderRadius.circular(20),
+        ),
         child: Stack(children: [
           Card(
             child: Container(
@@ -57,8 +67,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   crossAxisCount: 3,
                   crossAxisSpacing: 4.0,
                   mainAxisSpacing: 4.0,
-                  children: List.generate(menus.homemenus.
-                  length, (index) {
+                  children: List.generate(menus.homemenus.length, (index) {
                     return Center(
                       child: SelectCard(
                         menu: menus.homemenus[index],
@@ -72,16 +81,14 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           //BottomNavBar(index: 1,key: UniqueKey(),)
         ])),
     Container(
-      margin: const EdgeInsets.all(4),
+        margin: const EdgeInsets.all(4),
         padding: const EdgeInsets.all(8),
-
         decoration: BoxDecoration(
           border: Border.all(
             color: Colors.black45,
           ),
           borderRadius: BorderRadius.circular(20),
         ),
-
         child: Stack(children: [
           Card(
             child: Container(
@@ -90,8 +97,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   crossAxisCount: 3,
                   crossAxisSpacing: 4.0,
                   mainAxisSpacing: 4.0,
-                  children: List.generate(menus.ServiceMenus.
-                  length, (index) {
+                  children: List.generate(menus.ServiceMenus.length, (index) {
                     return Center(
                       child: SelectCard(
                         menu: menus.ServiceMenus[index],
@@ -104,7 +110,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
           //Container(height: 10,),
           //BottomNavBar(index: 1,key: UniqueKey(),)
         ])),
-
     const Text(
       'Coming soon',
       style: optionStyle,
@@ -154,7 +159,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                   onTap: () {
                     SystemChannels.platform.invokeMethod('SystemNavigator.pop');
-
                   },
                 ),
               ];
@@ -228,7 +232,4 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   }
 }
 
-
-Menus menus= new Menus();
-
-
+Menus menus = new Menus();
