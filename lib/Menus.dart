@@ -152,7 +152,7 @@ class Menus{
           "i. If successful, Loan Payment request will been made.\nii. A Print Receipt Button will be displayed.\n",
           " Proceed to print the Receipt\n"
         ]),
-    const Menu(
+    Menu(
         title: 'Member Registration',
         description:
         "This menu enables agents to register new members to Harambee Sacco.",
@@ -189,7 +189,7 @@ class Menus{
           "i. The new member should receive a Message from the Sacco about the registration and awaiting the confirmation from the SACCO.\n"
               "ii. Proceed to on PRINT RECEIPT button to print the member registration details."
         ]),
-    const Menu(
+    Menu(
         title: 'Float Deposit',
         description:
         "Helps Agent to deposit money from Sacco Account to Float Account",
@@ -464,8 +464,5 @@ class Menus{
           "If successful, the float account will be debited and a Verification message sent to the Agent’s Phone."
         ]),
   ];
-
-
-
 
 }

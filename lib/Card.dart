@@ -47,10 +47,10 @@ class SelectCard extends StatelessWidget {
       fit: BoxFit.fill,
     ),
           if(menu.title != null)
-            SizedBox(height: 5.0),
+            const SizedBox(height: 5.0),
           AutoSizeText(
             menu.title,
-            minFontSize: 10.0,
+            minFontSize: 8.0,
             textAlign: TextAlign.center,
             maxLines: 3,
             wrapWords: false,),
